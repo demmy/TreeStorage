@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TreeStorage
+namespace Abstract
 {
-    public abstract class BaseTree<T>:IBaseTree<T>
+    public abstract class BaseTree<T> : IBaseTree<T>
     {
         public abstract IEnumerator<T> GetEnumerator();
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();

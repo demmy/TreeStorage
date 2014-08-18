@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 
-[assembly: AssemblyTitle("TreeStorage")]
+[assembly: AssemblyTitle("Abstract")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TreeStorage")]
+[assembly: AssemblyProduct("Abstract")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
 
-[assembly: Guid("d9599103-efcf-4768-97a0-7056c136076a")]
+[assembly: Guid("3af14a7c-9c56-4c10-8ccf-d464ed500b8b")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
