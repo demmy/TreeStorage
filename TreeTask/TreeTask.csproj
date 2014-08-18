@@ -41,11 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Preson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abstract\Abstract.csproj">
+      <Project>{90ecf514-cf1b-45c1-8214-3671e0677345}</Project>
+      <Name>Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TreeStorage\Concrete.csproj">
+      <Project>{0C42683B-60E7-41E8-93BC-7490037ADF9D}</Project>
+      <Name>Concrete</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
