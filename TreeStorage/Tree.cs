@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Abstract;
 
@@ -7,9 +6,9 @@ namespace TreeStorage
 {
     public class Tree<T> : BaseTree<T>, ITree<T>
     {
+        private T data;
         private Tree<T> head;
         private Tree<T> next;
-        private T data;
 
         private Tree(T data, Tree<T> head, Tree<T> next)
         {
@@ -17,13 +16,14 @@ namespace TreeStorage
             this.head = head;
             this.next = next;
         }
-        public Tree():this(default(T),null,null)
+
+        public Tree() : this(default(T), null, null)
         {
         }
 
         public override IEnumerator<T> GetEnumerator()
         {
-            var current = this;
+            Tree<T> current = this;
             while (current != null)
             {
                 yield return current.data;
@@ -38,13 +38,13 @@ namespace TreeStorage
 
         public override T Data
         {
-            get { return this.data; }
-            set { this.data = value; }
+            get { return data; }
+            set { data = value; }
         }
 
         public override IBaseTree<T> Parent
         {
-            get { return this.head; }
+            get { return head; }
         }
 
         public override IList<IBaseTree<T>> Find(Comparison<T> c)
@@ -54,7 +54,7 @@ namespace TreeStorage
 
         public override IList<IBaseTree<T>> GetDirectChildren()
         {
-            var current = this.next;
+            Tree<T> current = next;
             IList<IBaseTree<T>> list = new List<IBaseTree<T>>();
             while (current != null)
             {
@@ -69,13 +69,13 @@ namespace TreeStorage
             var child = new Tree<T>();
             child.head = this;
             child.data = data;
-            this.next = child;
+            next = child;
             return child;
         }
 
         public bool RemoveChild(ITree<T> t)
         {
-            var current = this.next;
+            Tree<T> current = next;
             while (current != null)
             {
                 if (current.Equals(t))
